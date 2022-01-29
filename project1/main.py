@@ -13,13 +13,13 @@ a = template[0].strip().split("(adj1)")
 print(a[0] + "...")
 
 print("Please type an adjective.")
-response = str(input())
+response1 = str(input())
 
 
-b = template[0].strip().replace("(adj1)", response).split("(adj2)")
+b = template[0].strip().replace("(adj1)", response1).split("(adj2)")
 print(b[0] + "...")
 print ("Please type another adjective.")
-response = str(input())
-c = template[0].strip().replace("(adj1)", response).replace("(adj2)", response)
+response2 = str(input())
+c = template[0].strip().replace("(adj1)", response1).replace("(adj2)", response2)
 print(c)
 
