@@ -9,17 +9,16 @@ template = ["A vacation is when you take a trip to some (adj1) place with your (
 print("Welcome to Link's MadLib!")
 print("Let's start:")
 
-a = template[0].strip().split("(adj1)")
-print(a[0] + "...")
+def sent1():
+    temp_first = template[0].strip().split("(adj1)")
+    print(temp_first[0] + "...")
+    response1 = input("Please type an adjective: ")
+    response1 = response1.strip().lower().replace(" ", "")
 
-print("Please type an adjective.")
-response1 = str(input())
-
-
-b = template[0].strip().replace("(adj1)", response1).split("(adj2)")
-print(b[0] + "...")
-print ("Please type another adjective.")
-response2 = str(input())
-c = template[0].strip().replace("(adj1)", response1).replace("(adj2)", response2)
-print(c)
-
+    temp_second = template[0].strip().replace("(adj1)", response1).split("(adj2)")
+    print(temp_second[0] + "...")
+    response2 = input("Please type another adjective: ")
+    response2 = response2.strip(" ").lower().replace(" ", "")
+    temp_1_full = template[0].strip().replace("(adj1)", response1).replace("(adj2)", response2)
+    print(temp_1_full)
+sent1()
